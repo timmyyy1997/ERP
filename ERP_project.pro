@@ -26,10 +26,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         engineering_dialog.cpp \
-    upload_dialog.cpp
+    upload_dialog.cpp \
+    db_manager.cpp
 
 HEADERS  += engineering_dialog.h \
-    upload_dialog.h
+    upload_dialog.h \
+    db_manager.h
 
 FORMS    += engineering_dialog.ui \
     upload_dialog.ui

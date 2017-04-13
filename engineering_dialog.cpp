@@ -36,15 +36,18 @@ engineering_dialog::engineering_dialog(QWidget *parent) :
     ui->tableWidget_2->setRowCount(second_chart_rowcount);
     ui->tableWidget_2->setColumnCount(second_chart_columncount);
     QStringList horizontal_labels_2;
-    horizontal_labels_2.append("ID");
-    horizontal_labels_2.append("Part Name");
+    horizontal_labels_2.append("BOM Level");
     horizontal_labels_2.append("Part Number");
-    horizontal_labels_2.append("SN");
-    horizontal_labels_2.append("Assembly ID");
-    horizontal_labels_2.append("Other");
+    horizontal_labels_2.append("Part Name");
+    horizontal_labels_2.append("Revision");
+    horizontal_labels_2.append("Quantity");
+    horizontal_labels_2.append("Manufacturing Type");
+    horizontal_labels_2.append("Reference");
+    horizontal_labels_2.append("BOM Notes");
     ui->tableWidget_2->setHorizontalHeaderLabels(horizontal_labels_2);
     ui->tableWidget_2->setColumnWidth(0,50);
     ui->tableWidget_2->verticalHeader()->hide();
+    ui->tableWidget_2->resizeColumnsToContents();
     for(int i = 0; i<second_chart_rowcount; i++){
         ui->tableWidget_2->setRowHeight(i,25);
     }
@@ -81,6 +84,7 @@ engineering_dialog::engineering_dialog(QWidget *parent) :
 
     connect(up_dialog,SIGNAL(accepted()),this,SLOT(pass_the_index_list()));
 
+    // set up connection to local database testDB
 
 
 }
@@ -109,4 +113,15 @@ void engineering_dialog::pass_the_index_list(){
         mitem->setText(a.at(i));
         ui->tableWidget_3->setItem(0,i,mitem);
     }
+}
+
+void engineering_dialog::on_table_refresh_button_2_clicked()
+{
+
+}
+
+void engineering_dialog::on_test_button_clicked()
+{
+    manager->set_up_connection();
+    manager->insert_line(3);
 }

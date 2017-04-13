@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1419</width>
+    <width>1515</width>
     <height>845</height>
    </rect>
   </property>
@@ -26,8 +26,8 @@
   <widget class="QPushButton" name="upload_button">
    <property name="geometry">
     <rect>
-     <x>940</x>
-     <y>450</y>
+     <x>1100</x>
+     <y>440</y>
      <width>80</width>
      <height>31</height>
     </rect>
@@ -39,8 +39,8 @@
   <widget class="QPushButton" name="extract_button">
    <property name="geometry">
     <rect>
-     <x>1070</x>
-     <y>450</y>
+     <x>1230</x>
+     <y>440</y>
      <width>80</width>
      <height>31</height>
     </rect>
@@ -54,22 +54,22 @@
     <rect>
      <x>690</x>
      <y>60</y>
-     <width>600</width>
+     <width>761</width>
      <height>360</height>
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="extract_button_2">
+  <widget class="QPushButton" name="test_button">
    <property name="geometry">
     <rect>
-     <x>1200</x>
-     <y>450</y>
+     <x>1360</x>
+     <y>440</y>
      <width>80</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>Other</string>
+    <string>Test</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="tableWidget_3">
@@ -77,7 +77,7 @@
     <rect>
      <x>50</x>
      <y>510</y>
-     <width>1241</width>
+     <width>1401</width>
      <height>301</height>
     </rect>
    </property>
@@ -118,7 +118,20 @@
     </rect>
    </property>
    <property name="text">
-    <string>Another Chart</string>
+    <string>BOM Preview:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="table_refresh_button_2">
+   <property name="geometry">
+    <rect>
+     <x>1370</x>
+     <y>30</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refresh</string>
    </property>
   </widget>
  </widget>
